@@ -180,9 +180,7 @@ a {
     background-color: #e2e3e5;
 }
 
-.far-right-content {
-    width: 240px;
-}
+
 
 .button-group-1 button {
     width: 100px;
@@ -199,7 +197,9 @@ a {
     text-align: left;
     font-size: revert;
 }
-
+.far-right-content {
+    width: 240px;
+}
 .todo {
     margin-top: 15px;
 }
