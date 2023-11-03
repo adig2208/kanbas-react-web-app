@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
-import './index.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import "./index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCaretDown,
     faEllipsisV,
     faCheckCircle,
-    faPlus
-} from '@fortawesome/free-solid-svg-icons'
+    faPlus,
+} from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import {
     addModule,
@@ -31,26 +31,22 @@ function ModuleList() {
         button onClick = {
             () => dispatch(addModule({...module, course: courseId })) } >
         Add <
-        /button> <
+        /button>  <
         button onClick = {
-            () => dispatch(updateModule(module)) } >
-        Update <
-        /button>
-
-        <
+            () => dispatch(updateModule(module)) } > Update < /button> <
         input value = { module.name }
         onChange = {
             (e) =>
             dispatch(setModule({...module, name: e.target.value }))
         }
-        /> <
+        />  <
         textarea value = { module.description }
         onChange = {
             (e) =>
             dispatch(setModule({...module, description: e.target.value }))
         }
-        /> <
-        /div> {
+        />  <
+        /div>  {
             modules
                 .filter((module) => module.course === courseId)
                 .map((module, index) => ( <
@@ -64,52 +60,61 @@ function ModuleList() {
                     className = "ellipse-color" / >
                     <
                     FontAwesomeIcon icon = { faEllipsisV }
-                    className = "ellipse-color icon-space2" / >
+                    className = "ellipse-color icon-space2" /
+                    >
                     <
                     FontAwesomeIcon icon = { faCaretDown }
                     className = "icon-space2" / > { module.name } <
                     button onClick = {
                         () => dispatch(setModule(module)) } >
                     Edit <
-                    /button> <
+                    /button>  <
                     button onClick = {
                         () => dispatch(deleteModule(module._id)) } >
                     Delete <
-                    /button> <
+                    /button>  <
                     div className = "float-end" >
                     <
                     div className = "btn-group" >
                     <
                     FontAwesomeIcon icon = { faCheckCircle }
-                    className = "text-success icon-space dropdown-toggle" / >
+                    className = "text-success icon-space dropdown-toggle" /
+                    >
                     <
-                    ul className = "dropdown-menu" >
-                    <
-                    /ul> <
-                    /div> <
+                    ul className = "dropdown-menu" > < /ul>  <
+                    /div>  <
                     FontAwesomeIcon icon = { faPlus }
-                    className = "icon-space ellipse-color" / >
+                    className = "icon-space ellipse-color" /
+                    >
                     <
                     FontAwesomeIcon icon = { faEllipsisV }
-                    className = "ellipse-color" / >
+                    className = "ellipse-color" /
+                    >
                     <
-                    /div> <
-                    /li> <
+                    /div>  <
+                    /li>  <
                     li className = "list-group-item left-border-line" >
                     <
                     FontAwesomeIcon icon = { faEllipsisV }
                     className = "ellipse-color" / >
                     <
                     FontAwesomeIcon icon = { faEllipsisV }
-                    className = "ellipse-color icon-space-head" / > { module.description } <
-                    i className = "ellipse-color float-end " > < FontAwesomeIcon icon = { faEllipsisV }
-                    /></i >
+                    className = "ellipse-color icon-space-head" /
+                    > { module.description } <
+                    i className = "ellipse-color float-end " >
+
                     <
-                    i className = "text-success float-end icon-space" > < FontAwesomeIcon icon = { faCheckCircle }
-                    /></i >
+                    FontAwesomeIcon icon = { faEllipsisV }
+                    /> <
+                    /i> <
+                    i className = "text-success float-end icon-space" >
+
                     <
-                    /li> <
-                    /ul> <
+                    FontAwesomeIcon icon = { faCheckCircle }
+                    /> <
+                    /i> <
+                    /li>  <
+                    /ul>  <
                     /React.Fragment>
                 ))
         } <

@@ -1,15 +1,18 @@
-import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
+import {
+    Navigate,
+    Route,
+    Routes,
+    useParams,
+    useLocation,
+} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor/AssignmentEditor";
-import './course.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faBars,
-    faGlasses
-} from '@fortawesome/free-solid-svg-icons'
+import "./course.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faGlasses } from "@fortawesome/free-solid-svg-icons";
 
 function Courses({ courses }) {
     const { courseId } = useParams();
@@ -19,7 +22,11 @@ function Courses({ courses }) {
     const getBreadcrumbText = () => {
         const pathSegments = location.pathname.split("/");
 
-        const segment = (pathSegments.length > 1 && pathSegments[pathSegments.length - 2] === "Assignments") ? pathSegments[pathSegments.length - 2] : pathSegments.pop();
+        const segment =
+            pathSegments.length > 1 &&
+            pathSegments[pathSegments.length - 2] === "Assignments" ?
+            pathSegments[pathSegments.length - 2] :
+            pathSegments.pop();
 
         switch (segment) {
             case "Home":
@@ -33,7 +40,7 @@ function Courses({ courses }) {
             default:
                 return "Home";
         }
-    }
+    };
     return ( <
         main role = "main"
         className = "col-md-12 ml-sm-auto col-lg-12 px-md-4" >
@@ -43,27 +50,56 @@ function Courses({ courses }) {
         nav ariaLabel = "breadcrumb"
         className = "d-flex justify-content-between align-items-center old-navbar"
         style = {
-            { marginTop: '20px' } } >
+            { marginTop: "20px" } } >
         <
         ol className = "breadcrumb" >
         <
-        li > < a href = "#"
+        li >
+
+        <
+        a href = "#"
         className = "text-danger"
         style = {
-            { textDecoration: 'none' } } > < i className = "icon-space" > < FontAwesomeIcon icon = { faBars }
-        /></i > < /a></li >
+            { textDecoration: "none" } } >
+
         <
-        li className = "breadcrumb-item" > < a href = "#"
+        i className = "icon-space" >
+
+        <
+        FontAwesomeIcon icon = { faBars }
+        /> <
+        /i>  <
+        /a> <
+        /li> <
+        li className = "breadcrumb-item" >
+
+        <
+        a href = "#"
         className = "text-danger"
         style = {
-            { textDecoration: 'none' } } > { course.name } < /a></li >
-        <
+            { textDecoration: "none" } } >
+
+        { course.name } <
+        /a> <
+        /li> <
         li className = "breadcrumb-item active"
-        ariaCurrent = "page" > { getBreadcrumbText() } < /li> <
-        /ol> <
-        button className = "btn btn-secondary float-end color-change" > < i className = 'icon-space2' > < FontAwesomeIcon icon = { faGlasses }
-        /></i > Student View < /button> <
-        /nav> <
+        ariaCurrent = "page" >
+
+        { getBreadcrumbText() } <
+        /li>  <
+        /ol>  <
+        button className = "btn btn-secondary float-end color-change" >
+
+        <
+        i className = "icon-space2" >
+
+        <
+        FontAwesomeIcon icon = { faGlasses }
+        /> <
+        /i> 
+        Student View <
+        /button>  <
+        /nav>  <
         hr / >
         <
         div className = "row" >
@@ -74,28 +110,26 @@ function Courses({ courses }) {
         <
         Route path = "/"
         element = { < Navigate to = "Home" / > }
-        /> <
+        />  <
         Route path = "Home"
         element = { < Home / > }
-        /> <
+        />  <
         Route path = "Modules"
         element = { < Modules / > }
-        /> <
+        />  <
         Route path = "Assignments"
         element = { < Assignments / > }
-        /> <
+        />  <
         Route path = "Assignments/:assignmentId"
         element = { < AssignmentEditor / > }
-        /> <
+        />  <
         Route path = "Grades"
         element = { < h1 > Grades < /h1>} / >
             <
-            /Routes> <
-            /div> <
-            /div> <
+            /Routes>  <
+            /div>  <
+            /div>  <
             /main>
-
         );
-
     }
     export default Courses;

@@ -5,8 +5,9 @@ function HelloRedux() {
     return ( <
         div >
         <
-        h1 > Hello Redux < /h1> <
-        h2 > { message } < /h2> <
+        h1 > Hello Redux < /h1> <h2> {message} </h
+        2 >
+        <
         /div>
     );
 }

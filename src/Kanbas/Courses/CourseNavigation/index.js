@@ -2,6 +2,7 @@ import './index.css';
 import { Link, useLocation, useParams } from "react-router-dom";
 import CourseNavItem from './CourseNavItem';
 import Modules from '../Modules';
+
 function CourseNavigation() {
     const navItems = [
         { label: 'Home' },
@@ -24,25 +25,27 @@ function CourseNavigation() {
         { label: 'Progress Reports (EAB Navigate)' },
         { label: 'Settings' }
     ];
-    
+
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    
+
     return (
 
-            <nav className="col-md-3 d-md-block left-navigation">
-                <ul>
-                {navItems.map((navItem, index) => (
-                    <CourseNavItem 
-                        key={index}
-                        item={navItem}
-                        activePath={pathname}
-                        courseId={courseId}
-                    />
-                ))}
-                </ul>
-            </nav>
-        
+        <
+        nav className = "col-md-3 d-md-block left-navigation" >
+        <
+        ul > {
+            navItems.map((navItem, index) => ( <
+                CourseNavItem key = { index }
+                item = { navItem }
+                activePath = { pathname }
+                courseId = { courseId }
+                />
+            ))
+        } <
+        /ul> <
+        /nav>
+
     );
 }
 

@@ -10,15 +10,16 @@ function DateStateVariable() {
     return ( <
         div >
         <
-        h2 > Date State Variables < /h2> <
-        h3 > { JSON.stringify(startDate) } < /h3> <
-        h3 > { dateObjectToHtmlDateString(startDate) } < /h3> <
+        h2 > Date State Variables < /h2> <h3> {JSON.stringify(startDate)} </h
+        3 >
+        <
+        h3 > { dateObjectToHtmlDateString(startDate) } < /h3>  <
         input className = "form-control"
         type = "date"
         value = { dateObjectToHtmlDateString(startDate) }
         onChange = {
             (e) => setStartDate(new Date(e.target.value)) }
-        /> <
+        />  <
         /div>
     );
 }

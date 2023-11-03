@@ -7,14 +7,13 @@ function CounterRedux() {
     return ( <
         div >
         <
-        h2 > Counter Redux < /h2> <
-        h3 > { count } < /h3> <
+        h2 > Counter Redux < /h2> <h3> {count} </h
+        3 >
+        <
         button onClick = {
-            () => dispatch(increment()) } >
-        Increment < /button> <
+            () => dispatch(increment()) } > Increment < /button>  <
         button onClick = {
-            () => dispatch(decrement()) } >
-        Decrement < /button> <
+            () => dispatch(decrement()) } > Decrement < /button>  <
         /div>
     );
 }

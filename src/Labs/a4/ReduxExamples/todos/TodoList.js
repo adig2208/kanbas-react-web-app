@@ -8,7 +8,7 @@ function TodoList() {
     return ( <
         div >
         <
-        h2 > Todo List < /h2> <
+        h2 > Todo List < /h2>  <
         ul className = "list-group" >
         <
         TodoForm / > {
@@ -17,7 +17,7 @@ function TodoList() {
                 />
             ))
         } <
-        /ul> <
+        /ul>  <
         /div>
     );
 }

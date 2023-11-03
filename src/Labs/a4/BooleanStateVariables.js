@@ -5,8 +5,8 @@ function BooleanStateVariables() {
     return ( <
         div >
         <
-        h2 > Boolean State Variables < /h2> <
-        p > { done ? "Done" : "Not done" } < /p> <
+        h2 > Boolean State Variables < /h2> <p> {done ? "Done" : "Not done"} </p >
+        <
         label className = "form-control" >
         <
         input type = "checkbox"
@@ -15,10 +15,12 @@ function BooleanStateVariables() {
             () => setDone(!done) }
         />
         Done <
-        /label> {
-            done && < div className = "alert alert-success" >
-                Yay!you are done < /div>} <
-                /div>
-        );
-    }
-    export default BooleanStateVariables;
+        /label>  {
+            done && ( <
+                div className = "alert alert-success" > Yay!you are done < /div>
+            )
+        } <
+        /div>
+    );
+}
+export default BooleanStateVariables;

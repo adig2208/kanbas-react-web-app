@@ -9,13 +9,13 @@ function TodoForm() {
         li className = "list-group-item" >
         <
         button onClick = {
-            () => dispatch(addTodo(todo)) } > Add < /button> <
+            () => dispatch(addTodo(todo)) } > Add < /button>  <
         button onClick = {
-            () => dispatch(updateTodo(todo)) } > Update < /button> <
+            () => dispatch(updateTodo(todo)) } > Update < /button>  <
         input value = { todo.title }
         onChange = {
             (e) => dispatch(setTodo({...todo, title: e.target.value })) }
-        /> <
+        />  <
         /li>
     );
 }

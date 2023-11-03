@@ -7,8 +7,7 @@ const ReduxExamples = () => {
     return ( <
         div >
         <
-        h2 > Redux Examples < /h2> <
-        HelloRedux / >
+        h2 > Redux Examples < /h2> <HelloRedux / >
         <
         CounterRedux / >
         <

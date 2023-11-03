@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import db from "../Database";
-import './index.css';
-import CourseCard from './CourseCard';
+import "./index.css";
+import CourseCard from "./CourseCard";
 
 function Dashboard({
     courses,
@@ -10,10 +10,8 @@ function Dashboard({
     setCourse,
     addNewCourse,
     deleteCourse,
-    updateCourse
+    updateCourse,
 }) {
-
-
     return ( <
         main role = "main"
         className = "col-md-10 col-lg-10" >
@@ -24,17 +22,22 @@ function Dashboard({
         <
         div className = "top-section" >
         <
-        div className = "dashboard" > Dashboard < /div> <
-        /div> <
+        div className = "dashboard" > Dashboard < /div>  <
+        /div>  <
         hr / >
         <
-        /div> <
+        /div>  <
         div className = "inner-content" >
         <
-        div className = "published-courses" > Published Courses - { courses.length } < /div> <
+        div className = "published-courses" >
+
+        Published Courses - { courses.length } <
+        /div>  <
         hr / >
         <
-        div className = "row" > {
+        div className = "row" >
+
+        {
             courses.map((course) => ( <
                 CourseCard key = { course._id }
                 course = { course }
@@ -44,7 +47,7 @@ function Dashboard({
                 />
             ))
         } <
-        /div> <
+        /div>  <
         div className = "add-course-form" >
         <
         input value = { course.name }
@@ -62,24 +65,29 @@ function Dashboard({
         input type = "date"
         value = { course.startDate }
         onChange = {
-            (e) => setCourse({...course, startDate: e.target.value }) }
+            (e) =>
+            setCourse({...course, startDate: e.target.value })
+        }
         placeholder = "Start Date" /
         >
         <
         input type = "date"
         value = { course.endDate }
         onChange = {
-            (e) => setCourse({...course, endDate: e.target.value }) }
+            (e) =>
+            setCourse({...course, endDate: e.target.value })
+        }
         placeholder = "End Date" /
         >
         <
         button onClick = { addNewCourse }
-        className = "btn btn-primary" > Add < /button> <
-        /div>
+        className = "btn btn-primary" >
 
-        <
+        Add <
+        /button>  <
         /div> <
-        /div> <
+        /div>  <
+        /div>  <
         /main>
     );
 }

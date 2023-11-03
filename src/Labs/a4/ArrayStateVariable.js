@@ -11,18 +11,20 @@ function ArrayStateVariable() {
     return ( <
         div >
         <
-        h2 > Array State Variable < /h2> <
-        button onClick = { addElement } > Add Element < /button> <
-        ul > {
+        h2 > Array State Variable < /h2>  <
+        button onClick = { addElement } > Add Element < /button>  <
+        ul >
+
+        {
             array.map((item, index) => ( <
-                li key = { index } > { item } <
-                button onClick = {
-                    () => deleteElement(index) } >
-                Delete < /button> <
+                li key = { index } >
+
+                { item } < button onClick = {
+                    () => deleteElement(index) } > Delete < /button>  <
                 /li>
             ))
         } <
-        /ul> <
+        /ul>  <
         /div>
     );
 }

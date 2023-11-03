@@ -6,11 +6,11 @@ function Counter() {
     return ( <
         div >
         <
-        h2 > Counter: { count } < /h2> <
+        h2 > Counter: { count } < /h2>  <
         button onClick = {
-            () => setCount(count + 1) } > Up < /button> <
+            () => setCount(count + 1) } > Up < /button>  <
         button onClick = {
-            () => setCount(count - 1) } > Down < /button> <
+            () => setCount(count - 1) } > Down < /button>  <
         /div>
     );
 }

@@ -1,8 +1,12 @@
-import { useState } from 'react';
-import './index.css';
-import { Link } from 'react-router-dom';
-import { faEllipsisV, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from "react";
+import "./index.css";
+import { Link } from "react-router-dom";
+import {
+    faEllipsisV,
+    faEdit,
+    faTrash,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function CourseCard({ course, onDelete, onUpdate }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -24,11 +28,16 @@ function CourseCard({ course, onDelete, onUpdate }) {
         <
         div className = { `upper-half back-dblue` } >
         <
-        i className = "dots" > < FontAwesomeIcon icon = { faEllipsisV }
-        /></i >
+        i className = "dots" >
+
         <
-        /div> <
-        div className = "lower-half" > {
+        FontAwesomeIcon icon = { faEllipsisV }
+        /> <
+        /i> <
+        /div>  <
+        div className = "lower-half" >
+
+        {
             isEditing ? ( <
                 >
                 <
@@ -38,28 +47,37 @@ function CourseCard({ course, onDelete, onUpdate }) {
                 placeholder = "Edit Course Name" /
                 >
                 <
-                button onClick = { handleSave } > Save < /button> <
+                button onClick = { handleSave } > Save < /button>  <
                 />
             ) : ( <
                 >
                 <
                 Link to = { `/Kanbas/Courses/${course._id}` } >
                 <
-                div className = { `font-dblue` } > { course.name } < /div> <
-                div className = "course-number" > { course.number } < /div> <
-                div className = "course-term" > { course.startDate } - { course.endDate } < /div> <
-                /Link> <
-                button onClick = { handleEdit } > < FontAwesomeIcon icon = { faEdit }
-                /></button >
+                div className = { `font-dblue` } > { course.name } < /div>  <
+                div className = "course-number" > { course.number } < /div>  <
+                div className = "course-term" >
+
+                { course.startDate } - { course.endDate } <
+                /div>  <
+                /Link>  <
+                button onClick = { handleEdit } >
+
                 <
-                button onClick = { onDelete } > < FontAwesomeIcon icon = { faTrash }
-                /></button >
+                FontAwesomeIcon icon = { faEdit }
+                /> <
+                /button> <
+                button onClick = { onDelete } >
+
                 <
+                FontAwesomeIcon icon = { faTrash }
+                /> <
+                /button> <
                 />
             )
         } <
-        /div> <
-        /div> <
+        /div>  <
+        /div>  <
         /div>
     );
 }

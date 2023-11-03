@@ -19,17 +19,12 @@ function Assignment4() {
     return ( <
         div >
         <
-        h1 > Assignment 4 < /h1> <
-        AddValues a = { 1 }
-        b = { 2 }
-        /> <
-        ClickEvent / >
+        h1 > Assignment 4 < /h1> <AddValues a={1} b={2} / > < ClickEvent / >
         <
         PassingDataOnEvent / >
         <
         PassingFunctions theFunction = { sayHello }
-        /> <
-        EventObject / >
+        /> <EventObject / >
         <
         Counter / >
         <

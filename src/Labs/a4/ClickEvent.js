@@ -8,12 +8,10 @@ function ClickEvent() {
     return ( <
         div >
         <
-        h2 > Click Event < /h2> <
-        button onClick = { hello } >
-        Click Hello 1 < /button> <
+        h2 > Click Event < /h2> <button onClick={hello}>Click Hello 1 </button >
+        <
         button onClick = {
-            () => hello() } >
-        Click Hello 2 < /button> <
+            () => hello() } > Click Hello 2 < /button>  <
         button onClick = {
             () => {
                 hello();
@@ -21,7 +19,7 @@ function ClickEvent() {
             }
         } >
         Click Hello 3 <
-        /button> <
+        /button>  <
         /div>
     );
 }

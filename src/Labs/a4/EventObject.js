@@ -10,14 +10,14 @@ function EventObject() {
     return ( <
         div >
         <
-        h2 > Event Object < /h2> <
+        h2 > Event Object < /h2>  <
         button id = "event-button"
         onClick = {
             (e) => handleClick(e) }
         className = "btn btn-primary" >
         Display Event Object <
-        /button> <
-        pre > { JSON.stringify(event, null, 2) } < /pre> <
+        /button>  <
+        pre > { JSON.stringify(event, null, 2) } < /pre>  <
         /div>
     );
 }
