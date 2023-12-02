@@ -29,7 +29,7 @@ function Account() {
   }, []);
 
   return (
-    <div style={{ marginLeft: '50px' }}>
+    <div style={{ marginLeft: '250px' }}>
       <h1>Account</h1>
       {account && (
         <div>
