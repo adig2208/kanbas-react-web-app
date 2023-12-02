@@ -10,7 +10,7 @@ function Account() {
   };
   const signout = async () => {
     await client.signout();
-    navigate("/project/signin");
+    navigate("/Kanbas/signin");
   };
   const navigate = useNavigate();
   const fetchAccount = async () => {
