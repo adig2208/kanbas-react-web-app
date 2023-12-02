@@ -9,7 +9,7 @@ function Signin() {
     navigate("/Kanbas/account");
   };
   return (
-    <div style={{ marginLeft: '250px' }}>
+    <div style={{ marginLeft: '200px' }}>
       <h1>Signin</h1>
       <input value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
       <input value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
