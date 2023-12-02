@@ -29,8 +29,9 @@ function Account() {
   }, []);
 
   return (
-    <div style={{ marginLeft: '250px' }}>
-      <h1>Aditya</h1>
+    <div style={{ marginLeft: '200px' }}>
+      <h1>Account</h1>
+{console.log(account)}
       {account && (
         <div>
           <input value={account.password}
