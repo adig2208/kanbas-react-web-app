@@ -48,7 +48,7 @@ function UserTable() {
   };
   useEffect(() => { fetchUsers(); }, []);
   return (
-    <div>
+    <div style={{ marginLeft: '50px' }}>
       <h1>User List</h1>
       <table className="table">
         <thead>
@@ -88,7 +88,7 @@ function UserTable() {
         <tbody>
           {users.map((user) => (
             <tr key={user._id}>
-               <Link to={`/kanbas/account/${user._id}`}>
+               <Link to={`/Kanbas/account/${user._id}`}>
           {user.username}
         </Link>
 
