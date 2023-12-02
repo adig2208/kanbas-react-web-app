@@ -48,7 +48,7 @@ function UserTable() {
   };
   useEffect(() => { fetchUsers(); }, []);
   return (
-    <div style={{ marginLeft: '50px' }}>
+    <div style={{ marginLeft: '250px' }}>
       <h1>User List</h1>
       <table className="table">
         <thead>
