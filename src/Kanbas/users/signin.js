@@ -6,7 +6,7 @@ function Signin() {
   const navigate = useNavigate();
   const signin = async () => {
     await client.signin(credentials);
-    navigate("/Kanbas/Account");
+    navigate("/Kanbas/account");
   };
   return (
     <div style={{ marginLeft: '250px' }}>
