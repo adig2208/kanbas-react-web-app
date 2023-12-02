@@ -15,7 +15,7 @@ function Signup() {
     }
   };
   return (
-    <div style={{ marginLeft: '250px' }}>
+    <div style={{ marginLeft: '200px' }}>
       <h1>Signup</h1>
       {error && <div>{error}</div>}
       <input
