@@ -18,7 +18,7 @@ function KanbasNavigation() {
     const location = useLocation();
 
     const navItems = [
-        { path: '/Kanbas/Account', icon: faUserCircle, text: 'Account' },
+        { path: '/Kanbas/signin', icon: faUserCircle, text: 'Account' },
         { path: '/Kanbas/Dashboard', icon: faTachometerAlt, text: 'Dashboard' },
         { path: '/Kanbas/Courses', icon: faBook, text: 'Courses' },
         { path: '/Kanbas/Calendar', icon: faCalendarAlt, text: 'Calendar' },
