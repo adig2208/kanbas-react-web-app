@@ -1,11 +1,11 @@
-import Signin from "../users/signin";
-import Account from "../users/account";
+import Signin from "./users/signin";
+import Account from "./users/account";
 import React, { useEffect, useState } from "react";
 import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import UserTable from "../users/table";
+import UserTable from "./users/table";
 import db from "./Database";
 import { Provider } from "react-redux";
 import store from "./store";
