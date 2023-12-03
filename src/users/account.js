@@ -14,6 +14,7 @@ function Account() {
 
     const fetchAccount = async () => {
         const account = await client.account();
+        console.log(account);
         setAccount(account);
     };
 
