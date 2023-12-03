@@ -10,7 +10,7 @@ function Account() {
   };
   const signout = async () => {
     await client.signout();
-    navigate("/Kanbas/signin");
+    navigate("/project/signin");
   };
   const navigate = useNavigate();
   const fetchAccount = async () => {
@@ -62,7 +62,7 @@ function Account() {
   <button onClick={signout}>
     Signout
   </button>
-  <Link to="/kanbas/admin/users" className="btn btn-warning w-100">
+  <Link to="/project/admin/users" className="btn btn-warning w-100">
     Users
   </Link>
         </div>
