@@ -9,7 +9,7 @@ function Signup() {
   const signup = async () => {
     try {
       await client.signup(credentials);
-      navigate("/Kanbas/account");
+      navigate("/project/account");
     } catch (err) {
       setError(err.response.data.message);
     }
