@@ -36,6 +36,7 @@ function Account() {
     return (
         <div>
             <h1>Account</h1>
+    {console.log(account)}
             {account && (
                 <form>
                     <div className="col-3">
